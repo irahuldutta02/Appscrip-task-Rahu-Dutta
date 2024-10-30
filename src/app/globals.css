@@ -58,6 +58,13 @@
   letter-spacing: 1px;
 }
 
+.header button {
+  cursor: pointer;
+  background: none;
+  border: none;
+
+}
+
 .sm-heder-btm {
   padding: 15px 30px;
   display: flex;
@@ -180,6 +187,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hamburger-icon-ico {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 991px) {

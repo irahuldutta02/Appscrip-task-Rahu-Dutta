@@ -4,16 +4,18 @@ import NavMenu from "./NavMenu";
 export default function Header() {
   return (
     <>
-      <header className="header">
+      <header className="header" role="banner">
         <div className="header-content">
           <div className="logo-container">
-            <Image
-              src="/assets/svg/hamburger.svg"
-              alt="hamburger menu"
-              className="logo-icon hamburger-icon"
-              width={50}
-              height={50}
-            />
+            <button aria-label="Open menu" className="logo-icon hamburger-icon">
+              <Image
+                src="/assets/svg/hamburger.svg"
+                className="hamburger-icon-ico"
+                alt="hamburger-icon"
+                width={50}
+                height={50}
+              />
+            </button>
             <Image
               src="/assets/svg/logo.svg"
               alt="Company Logo"
@@ -27,59 +29,68 @@ export default function Header() {
             <span className="logo-text">LOGO</span>
           </div>
 
-          <div className="header-icons">
-            <div className="header-icon-wrapper">
+          <nav className="header-icons" aria-label="Header icons">
+            <button aria-label="Search" className="header-icon-wrapper">
               <Image
                 src="/assets/svg/search.svg"
-                alt="Search"
+                alt=""
                 className="header-icon"
                 width={24}
                 height={24}
               />
-            </div>
-            <div className="header-icon-wrapper">
+            </button>
+            <button aria-label="Account" className="header-icon-wrapper">
               <Image
                 src="/assets/svg/account.svg"
-                alt="Account"
+                alt=""
                 className="header-icon"
                 width={24}
                 height={24}
               />
-            </div>
-            <div className="header-icon-wrapper">
+            </button>
+            <button aria-label="Wishlist" className="header-icon-wrapper">
               <Image
                 src="/assets/svg/heart.svg"
-                alt="Wishlist"
+                alt=""
                 className="header-icon"
                 width={24}
                 height={24}
               />
-            </div>
-            <div className="header-icon-wrapper sm-display-none">
+            </button>
+            <button
+              aria-label="Cart"
+              className="header-icon-wrapper sm-display-none"
+            >
               <Image
                 src="/assets/svg/bag.svg"
-                alt="Cart"
+                alt=""
                 className="header-icon"
                 width={24}
                 height={24}
               />
-            </div>
+            </button>
             <div className="language-selector sm-display-none">
               <span>ENG</span>
-              <Image
-                src="/assets/svg/arrow-down.svg"
-                alt="Language dropdown"
-                className="header-icon"
-                width={24}
-                height={24}
-              />
+              <button aria-label="Change language">
+                <Image
+                  src="/assets/svg/arrow-down.svg"
+                  alt=""
+                  className="header-icon"
+                  width={24}
+                  height={24}
+                />
+              </button>
             </div>
-          </div>
+          </nav>
         </div>
         <NavMenu />
       </header>
 
-      <div className="sm-heder-btm">
+      <div
+        className="sm-heder-btm"
+        role="navigation"
+        aria-label="Secondary navigation"
+      >
         <span className="sm-heder-btm-left">HOME |</span>
         <span className="sm-heder-btm-right">SHOP</span>
       </div>
