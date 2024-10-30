@@ -1,16 +1,7 @@
 import Image from "next/image";
+import { product } from "../../types/products";
 
-export default function ProductCard({
-  product,
-}: {
-  product: {
-    _id: string;
-    name: string;
-    image: string;
-    markedAsNew: boolean;
-    stockCount: number;
-  };
-}) {
+export default function ProductCard({ product }: { product: product }) {
   const outOfStock = product?.stockCount === 0;
 
   return (
