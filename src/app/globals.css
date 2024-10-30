@@ -413,7 +413,7 @@
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  width: 240px;
+  width: 270px;
   padding: 20px;
   z-index: 1000;
   overflow: hidden;
@@ -462,7 +462,7 @@
 @media (max-width: 991px) {
   .sort-selector-modal {
     padding: 10px;
-    width: 200px;
+    width: 210px;
   }
 
   .sort-option.selected .header-icon {
@@ -540,6 +540,10 @@
 .filter-label {
   flex-grow: 1;
   font-size: small;
+}
+
+.sr-only {
+  font-weight: 700;
 }
 
 .filter-separator {

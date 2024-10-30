@@ -7,13 +7,34 @@ import SortSelectorModal from "./SortSelectorModal";
 
 export default function ProductFilter() {
   const { sidebarOpen, setSidebarOpen } = useContext(sidebarContext)!;
+
   const [sortOpen, setSortOpen] = useState(false);
-  const sortRef = useRef<HTMLDivElement>(null);
+  const [sortOpenSm, setSortOpenSm] = useState(false);
+  const sortRefLg = useRef<HTMLDivElement>(null);
+  const sortRefSm = useRef<HTMLDivElement>(null);
+
+  const sortOptions = [
+    "RECOMMENDED",
+    "NEWEST FIRST",
+    "POPULARITY",
+    "PRICE: LOW TO HIGH",
+    "PRICE: HIGH TO LOW",
+  ];
+  const [selectedOption, setSelectedOption] = useState("RECOMMENDED");
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (sortRef.current && !sortRef.current.contains(event.target as Node)) {
+      if (
+        sortRefLg.current &&
+        !sortRefLg.current.contains(event.target as Node)
+      ) {
         setSortOpen(false);
+      }
+      if (
+        sortRefSm.current &&
+        !sortRefSm.current.contains(event.target as Node)
+      ) {
+        setSortOpenSm(false);
       }
     }
 
@@ -21,7 +42,7 @@ export default function ProductFilter() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [sortRef]);
+  }, [sortRefLg, sortRefSm]);
 
   return (
     <>
@@ -62,7 +83,7 @@ export default function ProductFilter() {
               </button>
             )}
           </div>
-          <div className="sort-selector" ref={sortRef}>
+          <div className="sort-selector" ref={sortRefLg}>
             <div
               className="sort-selector-wrapper"
               onClick={() => setSortOpen((prev) => !prev)}
@@ -70,7 +91,7 @@ export default function ProductFilter() {
               tabIndex={0}
               aria-label="Sort options"
             >
-              <span>RECOMMENDED</span>
+              <span>{selectedOption}</span>
               <Image
                 src="/assets/svg/arrow-down.svg"
                 alt="Sort dropdown"
@@ -80,7 +101,13 @@ export default function ProductFilter() {
               />
             </div>
 
-            {sortOpen && <SortSelectorModal />}
+            {sortOpen && (
+              <SortSelectorModal
+                sortOptions={sortOptions}
+                selectedOption={selectedOption}
+                setSelectedOption={setSelectedOption}
+              />
+            )}
           </div>
         </div>
         <div className="filter-divider"></div>
@@ -90,15 +117,15 @@ export default function ProductFilter() {
       <section className="sm-product-filter">
         <div className="sm-product-filter-header">FILTER</div>
         <div className="filter-divider-line"></div>
-        <div className="sort-selector">
+        <div className="sort-selector" ref={sortRefSm}>
           <div
             className="sort-selector-wrapper"
-            onClick={() => setSortOpen((prev) => !prev)}
+            onClick={() => setSortOpenSm((prev) => !prev)}
             role="button"
             tabIndex={0}
             aria-label="Sort options"
           >
-            <span>RECOMMENDED</span>
+            <span>{selectedOption}</span>
             <Image
               src="/assets/svg/arrow-down.svg"
               alt="Sort dropdown"
@@ -108,7 +135,13 @@ export default function ProductFilter() {
             />
           </div>
 
-          {sortOpen && <SortSelectorModal />}
+          {sortOpenSm && (
+            <SortSelectorModal
+              sortOptions={sortOptions}
+              selectedOption={selectedOption}
+              setSelectedOption={setSelectedOption}
+            />
+          )}
         </div>
         <div className="sm-filter-divider"></div>
       </section>
