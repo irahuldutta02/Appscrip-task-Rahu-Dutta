@@ -193,7 +193,7 @@
   }
 }
 @media (min-width: 991px) {
-  .hamburger-icon{
+  .hamburger-icon {
     display: none;
   }
 }
@@ -449,7 +449,6 @@
 }
 
 @media (max-width: 991px) {
-
   .sort-selector-modal {
     padding: 10px;
     width: 200px;
@@ -569,7 +568,7 @@
 }
 
 .unselect-all {
-  color: #BFC8CD;
+  color: #bfc8cd;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -741,6 +740,7 @@
   .newsletter-input-group {
     margin-top: 24px;
     flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -764,6 +764,14 @@
   text-transform: uppercase;
   padding: 13px 24px;
   cursor: pointer;
+  flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+  .newsletter-submit {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .contact-info {
@@ -856,7 +864,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1136px;
+  max-width: 1240px;
   margin-top: 56px;
 }
 
