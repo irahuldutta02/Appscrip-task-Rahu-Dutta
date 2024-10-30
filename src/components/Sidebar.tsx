@@ -119,7 +119,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="filter-sidebar">
+      <aside className="filter-sidebar" aria-labelledby="filter-sidebar-title">
         <div className="filter-section">
           {/* Customizable */}
           <div className="filter-option">
@@ -145,12 +145,23 @@ export default function Sidebar() {
                     prev === filter._id ? null : filter._id
                   );
                 }}
+                role="button"
+                aria-expanded={openFilter === filter._id}
+                aria-controls={`filter-options-${filter._id}`}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    setOpenFilter((prev) =>
+                      prev === filter._id ? null : filter._id
+                    );
+                  }
+                }}
               >
                 <span>{filter.label}</span>
                 {openFilter === filter._id ? (
                   <Image
                     src="/assets/svg/arrow-up.svg"
-                    alt="Expand"
+                    alt="Collapse"
                     className="filter-group-toggle"
                     width={24}
                     height={24}
@@ -167,6 +178,7 @@ export default function Sidebar() {
               </div>
               <div className="all">All</div>
               <div
+                id={`filter-options-${filter._id}`}
                 className={`filter-group-options ${
                   openFilter === filter._id ? "" : "display-none"
                 }`}
