@@ -4,11 +4,17 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <section className="newsletter-section">
+      <section
+        className="newsletter-section"
+        role="region"
+        aria-labelledby="newsletter-title"
+      >
         <div className="newsletter-content">
           {/* newsletter form */}
-          <form className="newsletter-form">
-            <h2 className="newsletter-title">Be the first to know</h2>
+          <form className="newsletter-form" aria-labelledby="newsletter-title">
+            <h2 id="newsletter-title" className="newsletter-title">
+              Be the first to know
+            </h2>
             <p className="newsletter-description">
               Sign up for updates from mettā muse.
             </p>
@@ -23,15 +29,25 @@ export default function Footer() {
                 placeholder="Enter your e-mail..."
                 required
               />
-              <button type="submit" className="newsletter-submit">
+              <button
+                type="submit"
+                className="newsletter-submit"
+                aria-label="Subscribe to newsletter"
+              >
                 Subscribe
               </button>
             </div>
           </form>
 
           {/* contact us */}
-          <div className="contact-info">
-            <h2 className="contact-title">CONTACT US</h2>
+          <div
+            className="contact-info"
+            role="region"
+            aria-labelledby="contact-title"
+          >
+            <h2 id="contact-title" className="contact-title">
+              CONTACT US
+            </h2>
             <p className="contact-details">+44 221 133 5360</p>
             <p className="contact-details">customercare@mettamuse.com</p>
             <div className="currency-selector">
@@ -39,7 +55,7 @@ export default function Footer() {
               <div className="language-selector lg-currency-selector">
                 <Image
                   src="/assets/svg/us.svg"
-                  alt="Currency flag"
+                  alt="US flag"
                   className="header-icon"
                   width={24}
                   height={24}
@@ -64,15 +80,21 @@ export default function Footer() {
         <div className="footer-divider"></div>
 
         {/* sm call us */}
-        <div className="sm-call-us">
+        <div
+          className="sm-call-us"
+          role="region"
+          aria-labelledby="sm-call-us-title"
+        >
           <div className="sm-call-us-wrapper">
-            <h2 className="sm-call-us-up">CALL US</h2>
+            <h2 id="sm-call-us-title" className="sm-call-us-up">
+              CALL US
+            </h2>
             <div className="sm-call-us-down">
               <div className="sm-call-us-text">
                 <span>+44 221 133 5360</span>
                 <Image
                   src="/assets/svg/star-1.svg"
-                  alt="Currency dropdown"
+                  alt="Star icon"
                   width={5}
                   height={5}
                 />
@@ -84,14 +106,20 @@ export default function Footer() {
         <div className="footer-divider footer-divider-sm-call-us"></div>
 
         {/* sm currency */}
-        <div className="sm-call-us">
+        <div
+          className="sm-call-us"
+          role="region"
+          aria-labelledby="sm-currency-title"
+        >
           <div className="sm-call-us-wrapper">
-            <h2 className="sm-call-us-up">CURRENCY</h2>
+            <h2 id="sm-currency-title" className="sm-call-us-up">
+              CURRENCY
+            </h2>
             <div className="sm-call-us-down">
               <div className="language-selector">
                 <Image
                   src="/assets/svg/us.svg"
-                  alt="Currency flag"
+                  alt="US flag"
                   width={24}
                   height={24}
                 />
@@ -109,11 +137,17 @@ export default function Footer() {
         <div className="footer-divider footer-divider-sm-call-us"></div>
 
         {/* sm-brand */}
-        <div className="sm-brand">
-          <h2 className="sm-call-us-up">mettā muse</h2>
+        <div
+          className="sm-brand"
+          role="region"
+          aria-labelledby="sm-brand-title"
+        >
+          <h2 id="sm-brand-title" className="sm-call-us-up">
+            mettā muse
+          </h2>
           <Image
             src="/assets/svg/arrow-right.svg"
-            alt=""
+            alt="Arrow right icon"
             className="Instagram-icon"
             width={30}
             height={30}
@@ -122,11 +156,17 @@ export default function Footer() {
         <div className="footer-divider footer-divider-sm-call-us"></div>
 
         {/* sm-quick-links */}
-        <div className="sm-brand">
-          <h2 className="sm-call-us-up">QUICK LINKS</h2>
+        <div
+          className="sm-brand"
+          role="region"
+          aria-labelledby="sm-quick-links-title"
+        >
+          <h2 id="sm-quick-links-title" className="sm-call-us-up">
+            QUICK LINKS
+          </h2>
           <Image
             src="/assets/svg/arrow-right.svg"
-            alt=""
+            alt="Arrow right icon"
             className="Instagram-icon"
             width={30}
             height={30}
@@ -135,11 +175,17 @@ export default function Footer() {
         <div className="footer-divider footer-divider-sm-call-us"></div>
 
         {/* sm-quick-links */}
-        <div className="sm-brand">
-          <h2 className="sm-call-us-up">FOLLOW US</h2>
+        <div
+          className="sm-brand"
+          role="region"
+          aria-labelledby="sm-follow-us-title"
+        >
+          <h2 id="sm-follow-us-title" className="sm-call-us-up">
+            FOLLOW US
+          </h2>
           <Image
             src="/assets/svg/arrow-right.svg"
-            alt=""
+            alt="Arrow right icon"
             className="Instagram-icon"
             width={30}
             height={30}
@@ -147,13 +193,13 @@ export default function Footer() {
         </div>
         <div className="footer-divider footer-divider-sm-call-us"></div>
 
-        <footer className="footer-links">
+        <footer className="footer-links" role="contentinfo">
           <div className="footer-main">
             <div className="footer-main-wrapper">
               {/* footer brand */}
               <div className="footer-brand">
                 <h2 className="footer-brand-name">mettā muse</h2>
-                <nav className="footer-nav">
+                <nav className="footer-nav" aria-label="Footer navigation">
                   <a href="#" className="footer-nav-item">
                     About Us
                   </a>
@@ -178,7 +224,7 @@ export default function Footer() {
               {/* footer links */}
               <div className="footer-links-column">
                 <h3 className="footer-links-title">Quick Links</h3>
-                <nav className="footer-links-list">
+                <nav className="footer-links-list" aria-label="Quick links">
                   <a href="#" className="footer-links-item">
                     Orders & Shipping
                   </a>
@@ -210,16 +256,16 @@ export default function Footer() {
                   <Link href="#" aria-label="Instagram">
                     <Image
                       src="/assets/svg/insta.svg"
-                      alt=""
+                      alt="Instagram icon"
                       className="Instagram-icon"
                       width={30}
                       height={30}
                     />
                   </Link>
-                  <Link href="#" aria-label="linkedin">
+                  <Link href="#" aria-label="LinkedIn">
                     <Image
                       src="/assets/svg/linkedin.svg"
-                      alt=""
+                      alt="LinkedIn icon"
                       className="linkedin-icon"
                       width={30}
                       height={30}
@@ -232,7 +278,7 @@ export default function Footer() {
                   <div className="payment-icons">
                     <Image
                       src="/assets/svg/gpay.svg"
-                      alt="Visa"
+                      alt="Google Pay"
                       className="payment-icon"
                       width={45}
                       height={45}
@@ -246,28 +292,28 @@ export default function Footer() {
                     />
                     <Image
                       src="/assets/svg/paypal.svg"
-                      alt="American Express"
-                      className="payment-icon"
-                      width={45}
-                      height={45}
-                    />
-                    <Image
-                      src="/assets/svg/amx.svg"
-                      alt="Discover"
-                      className="payment-icon"
-                      width={45}
-                      height={45}
-                    />
-                    <Image
-                      src="/assets/svg/applePay.svg"
                       alt="PayPal"
                       className="payment-icon"
                       width={45}
                       height={45}
                     />
                     <Image
-                      src="/assets/svg/pay.svg"
+                      src="/assets/svg/amx.svg"
+                      alt="American Express"
+                      className="payment-icon"
+                      width={45}
+                      height={45}
+                    />
+                    <Image
+                      src="/assets/svg/applePay.svg"
                       alt="Apple Pay"
+                      className="payment-icon"
+                      width={45}
+                      height={45}
+                    />
+                    <Image
+                      src="/assets/svg/pay.svg"
+                      alt="Pay icon"
                       className="payment-icon"
                       width={45}
                       height={45}
