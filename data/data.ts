@@ -120,6 +120,6 @@ export const getProducts = (): Promise<product[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([...products]);
-    }, 1000);
+    }, 3000);
   });
 };
