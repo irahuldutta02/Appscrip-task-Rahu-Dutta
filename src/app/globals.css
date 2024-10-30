@@ -62,7 +62,6 @@
   cursor: pointer;
   background: none;
   border: none;
-
 }
 
 .sm-heder-btm {
@@ -606,8 +605,12 @@
 
 .product-image {
   position: relative;
-  aspect-ratio: 0.75;
   width: 100%;
+}
+
+.product-image-img {
+  width: 100%;
+  height: auto;
 }
 
 .image-opacity-low {
