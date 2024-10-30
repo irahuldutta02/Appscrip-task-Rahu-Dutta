@@ -1,5 +1,3 @@
-import { product } from "../types/products";
-
 const products = [
   {
     _id: "1",
@@ -115,11 +113,4 @@ const products = [
   },
 ];
 
-// mock api call
-export const getProducts = (): Promise<product[]> => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve([...products]);
-    }, 3000);
-  });
-};
+export const getProducts = () => products;

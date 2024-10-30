@@ -221,7 +221,7 @@
 .nav-menu {
   display: flex;
   margin-top: 60px;
-  align-items: start;
+  align-items: flex-start;
   gap: 64px;
   color: #252020;
   font: 700 20px/1 "Inter", sans-serif;
@@ -428,7 +428,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   flex-direction: column;
   gap: 10px;
 }
