@@ -7,6 +7,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - **Vercel**: [Deployment Link](https://appscrip-task-rahul-dutta.vercel.app)
 - **GitHub Repository**: [Appscrip-task-Rahul-Dutta](https://github.com/irahuldutta02/Appscrip-task-Rahul-Dutta)
 
+### Light House Score
+
+![light-house-score](./docs/lighthouse.png)
+
 ## Local Setup
 
 ### Cloning the Repository
