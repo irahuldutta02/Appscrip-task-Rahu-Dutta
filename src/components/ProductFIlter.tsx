@@ -34,10 +34,11 @@ export default function ProductFilter() {
               <button
                 className="filter-toggle"
                 onClick={() => setSidebarOpen(false)}
+                aria-label="Hide filter"
               >
                 <Image
                   src="/assets/svg/arrow-left.svg"
-                  alt=""
+                  alt="Arrow left"
                   className="banner-icon"
                   width={24}
                   height={24}
@@ -48,10 +49,11 @@ export default function ProductFilter() {
               <button
                 className="filter-toggle"
                 onClick={() => setSidebarOpen(true)}
+                aria-label="Show filter"
               >
                 <Image
                   src="/assets/svg/arrow-right-1.svg"
-                  alt=""
+                  alt="Arrow right"
                   className="banner-icon"
                   width={24}
                   height={24}
@@ -64,6 +66,9 @@ export default function ProductFilter() {
             <div
               className="sort-selector-wrapper"
               onClick={() => setSortOpen((prev) => !prev)}
+              role="button"
+              tabIndex={0}
+              aria-label="Sort options"
             >
               <span>RECOMMENDED</span>
               <Image
@@ -89,6 +94,9 @@ export default function ProductFilter() {
           <div
             className="sort-selector-wrapper"
             onClick={() => setSortOpen((prev) => !prev)}
+            role="button"
+            tabIndex={0}
+            aria-label="Sort options"
           >
             <span>RECOMMENDED</span>
             <Image
