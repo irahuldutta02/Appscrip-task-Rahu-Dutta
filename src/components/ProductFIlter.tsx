@@ -84,7 +84,7 @@ export default function ProductFilter() {
             )}
           </div>
           <div className="sort-selector" ref={sortRefLg}>
-            <div
+            <button
               className="sort-selector-wrapper"
               onClick={() => setSortOpen((prev) => !prev)}
               role="button"
@@ -99,7 +99,7 @@ export default function ProductFilter() {
                 width={24}
                 height={24}
               />
-            </div>
+            </button>
 
             {sortOpen && (
               <SortSelectorModal

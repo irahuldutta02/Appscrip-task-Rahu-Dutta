@@ -130,9 +130,7 @@ export default function Sidebar() {
               width={24}
               height={24}
             />
-            <label htmlFor="customizable" className="sr-only">
-              Customizable
-            </label>
+            <span className="sr-only">Customizable</span>
           </div>
           <div className="filter-separator"></div>
 

@@ -404,6 +404,15 @@
   gap: 8px;
   justify-content: space-between;
   cursor: pointer;
+  background: none;
+  border: none;
+  font: 700 18px/1 "Inter", sans-serif;
+}
+
+@media (max-width: 991px) {
+  .sort-selector-wrapper {
+    font: 600 12px/1 "Inter", sans-serif;
+  }
 }
 
 .sort-selector-modal {
