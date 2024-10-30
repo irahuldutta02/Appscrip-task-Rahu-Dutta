@@ -27,6 +27,11 @@ export default function SortSelectorModal({
           tabIndex={0}
           aria-pressed={selectedOption === option}
           onClick={() => setSelectedOption(option)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              setSelectedOption(option);
+            }
+          }}
         >
           {selectedOption === option && (
             <Image
