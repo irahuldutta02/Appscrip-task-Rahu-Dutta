@@ -119,7 +119,7 @@ const products = [
 export const getProducts = (): Promise<product[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(products);
+      resolve([...products]);
     }, 1000);
   });
 };
